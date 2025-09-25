@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google</title>
+
+  <!-- puxando o CSS do Bootstrap via CDN -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    
+    <!-- flex-column + min-vh-100 pra ocupar a tela inteira -->
+
+    <!-- Usei Aria-Label em todos textos, melhorando a acessibilidade-->
+
+    <!-- nav simples com os links alinhados à direita -->
+
+  <header class="d-flex justify-content-end p-3 bg-light">
+    <nav>
+
+   <!-- aria-label para ajudar leitor de tela, links estilizados com classes bootstrap -->
+
+      <a href="#" aria-label="Gmail" class="text-decoration-none text-dark me-3">Gmail</a>
+      <a href="#" aria-label="Imagens" class="text-decoration-none text-dark">Imagens</a>
+    </nav>
+  </header>
+
+ 
+  <!-- esse main cresce (flex-grow) e centraliza tudo na vertical e horizontal -->
+
+  <main class="d-flex flex-column justify-content-center align-items-center text-center flex-grow-1">
+    <div style="max-width: 584px; width: 100%;">
+
+       <!-- logo colorido com letras em spans para usar as classes de cor do bootstrap.-->
+
+      <div class="display-1 fw-bold mb-3">
+        <span class="text-primary">G</span>
+        <span class="text-danger" >o</span>
+        <span class="text-warning">o</span>
+        <span class="text-primary">g</span>
+        <span class="text-success">l</span>
+        <span class="text-danger" >e</span>
+      </div>
+
+     <!-- formulário de pesquisa, utilizei event.preventDefault() para evitar erros durante teste -->
+
+      <form class="d-flex flex-column align-items-center" onsubmit="event.preventDefault();">
+
+        <!-- label escondido (visually-hidden) só para acessibilidade, leitor de tela lê a descrição -->
+
+        <label for="search-input" aria-label="Pesquisar no Google" class="visually-hidden">Pesquisar no Google</label>
+
+        <!-- form-control já deixa o input padronizado e bonitinho -->
+
+        <!-- rounded-pill pra deixar o campo arredondado, estilo Google -->
+
+        <input type="text" id="search-input" class="form-control rounded-pill shadow-sm"
+          aria-label="Pesquisar no Google"
+          placeholder="Pesquisar no Google ou digitar um URL"
+          style="height: 47px;">
+
+        <!-- override para altura maior, deixa mais fácil clicar e ler -->
+
+        <!-- d-flex + justify-content-center pra deixar no meio -->
+
+        <div class="d-flex justify-content-center mt-3">
+         <button type="submit" onclick="event.preventDefault();" aria-label="Pesquisa Google" class="btn btn-light text-dark mx-1 px-3">Pesquisa Google</button>
+          <button type="submit" onclick="event.preventDefault();" aria-label="Estou com sorte" class="btn btn-light text-dark mx-1 px-3">Estou com sorte</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+   <!-- footer com container-fluid pra ocupar toda largura, fundo claro -->
+
+  <footer class="mt-auto">
+    <div class="container-fluid bg-light p-3">
+      <div class="row text-center text-md-start">
+        
+        <!-- grid responsivo com flex-column no mobile e linha no desktop -->
+
+        <div class="row">
+            <div class="col-6 d-flex flex-column flex-md-row justify-content-md-start mb-2 mb-md-0">
+              <a href="#" aria-label="Sobre" class="text-decoration-none text-secondary px-2 small">Sobre</a>
+              <a href="#" aria-label="Privacidade" class="text-decoration-none text-secondary px-2 small">Privacidade</a>
+            </div>
+          
+            <div class="col-6 d-flex flex-column flex-md-row justify-content-md-end">
+              <a href="#"  aria-label="Termos" class="text-decoration-none text-secondary px-2 small">Termos</a>
+              <a href="#" aria-label="Configurações" class="text-decoration-none text-secondary px-2 small">Configurações</a>
+            </div>
+          </div>
+          
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

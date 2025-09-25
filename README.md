@@ -6,11 +6,11 @@ A ideia foi demonstrar domínio de grid, utilitários, formulários e componente
 ## 🚀 Tecnologias usadas
 - *HTML5* (estrutura semântica: <header>, <main>, <footer>)
 - Bootstrap 5.3 via CDN (grid, flexbox, utilitários de espaçamento, tipografia e botões)
-- *JavaScript inline básico* (event.preventDefault()) para evitar refresh da página no envio do formulário
+- JavaScript inline básico (event.preventDefault()) para evitar refresh da página no envio do formulário
 
 ## 📱 Responsividade
 - Mobile (≤576px): links do rodapé empilham em coluna.
-- *Tablet/Desktop:* rodapé fica em 2 colunas, links lado a lado.
+- Tablet/Desktop: rodapé fica em 2 colunas, links lado a lado.
 - Conteúdo principal centralizado vertical e horizontalmente em qualquer viewport.
 
 ## 🧩 Estrutura
